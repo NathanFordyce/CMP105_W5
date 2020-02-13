@@ -13,11 +13,12 @@ Zombie::Zombie()
 	walk.addFrame(sf::IntRect(385, 0, 55, 108));
 	walk.setFrameSpeed(0.1f);
 
+	
 	speed = 100;
 	moving = false;
 	walk.reset();
 	setTextureRect(walk.getCurrentFrame());
-
+	
 }
 
 Zombie:: ~Zombie()
@@ -27,9 +28,9 @@ Zombie:: ~Zombie()
 
 void Zombie::update(float dt)
 {
-	walk.setFlipped(direction);
 	if (moving)
 	{
+		walk.setFlipped(direction);
 		walk.animate(dt);
 		setTextureRect(walk.getCurrentFrame());
 	}

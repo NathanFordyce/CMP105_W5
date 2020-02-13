@@ -31,7 +31,6 @@ void Level::handleInput(float dt)
 
 	if (input->isKeyDown(sf::Keyboard::Right))
 	{
-		input->setKeyUp(sf::Keyboard::Right);
 		zombie.moving = true;
 		zombie.direction = false;
 		zombie.move(sf::Vector2f(zombie.distance, 0));
@@ -40,7 +39,6 @@ void Level::handleInput(float dt)
 
 	if (input->isKeyDown(sf::Keyboard::Left))
 	{
-		input->setKeyUp(sf::Keyboard::Left);
 		zombie.moving = true;
 		zombie.direction = true;
 		zombie.move(sf::Vector2f(-zombie.distance, 0));
